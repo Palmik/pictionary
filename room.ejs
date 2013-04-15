@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+    <head>
+      <script src="<%- server %>/socket.io/socket.io.js"></script>
+      <script src="<%- server %>/static/js/canvas/canvas.js"></script>
+      <script src="<%- server %>/static/js/bootstrap.min.js"></script>
+
+      <link rel="stylesheet" href="<%- server %>/static/css/style.css" type="text/css" media="screen" />
+    </head>
+    <body onload="initialize('<%- room %>')">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="row-fluid navbar-inner">
+            <div class="container-fluid span10">
+              <a class="brand" href="#">Dicktionary</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <div class="span2">
+              <div id="canvas-options" class="well well-small">
+                <input style="width: 100%" id="canvas-pencil-width" type="text" value="5"/>
+                <input style="width: 100%" id="canvas-pencil-color" type="text" value="black"/>
+              </div>
+              
+              <div id="canvas-message-box" class="well well-small"></div>
+            </div>
+            
+            <div class="span10">
+              <canvas style="position: relative; display: block; margin: 0px auto; border: 1px solid #AFAFAF" id="canvas-canvas" width="1000" height="600">
+              </canvas>
+            </div>
+            
+          </div>
+        </div>
+    
+    </body>
+</html>
